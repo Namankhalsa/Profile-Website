@@ -1,0 +1,111 @@
+/* =============== GLOBAL STYLES =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at center, #0b0b0b, #010101);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* =============== HEADINGS =============== */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 30px #4a646e;
+  letter-spacing: 2px;
+}
+
+/* =============== MARKS SECTION =============== */
+.marks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gradient margin line on top */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: linear-gradient(to right, red, yellow, green);
+}
+
+/* =============== GRADIENT COLORS =============== */
+.tenth::before {
+  background: linear-gradient(to right, #00ff55, #00c244); /* Full green */
+}
+
+.twelfth::before {
+  background: linear-gradient(to right, red, yellow, green); /* Red→Green mix */
+}
+
+.college::before {
+  background: linear-gradient(to right, #ff9900, #02ff2c); /* Orange→Teal */
+}
+
+/* =============== TEXT INSIDE CARDS =============== */
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card h2 span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bbb;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+/* =============== BACK BUTTON =============== */
+.back-btn {
+  margin-top: 60px;
+  padding: 10px 25px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
